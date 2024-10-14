@@ -1,8 +1,8 @@
 ﻿Функция ПроверитьСессию(Углубленно = Ложь)
 	Возврат ЗначениеЗаполнено(user_id) И ЗначениеЗаполнено(auth_token);
 	//Углубленно <> Ложь
-	//curl -H "X-Auth-Token: 9HqLlyZOugoStsXCUfD_0YdwnNnunAJF8V47U3QHXSq" \
-	//     -H "X-User-Id: aobEdbYhXfu5hkeqG" \
+	//curl -H "X-Auth-Token: *" \
+	//     -H "X-User-Id: *" \
 	//     http://localhost:3000/api/v1/me
 КонецФункции
 
@@ -41,7 +41,7 @@
 	КонецЕсли;
 	////------------------------------- TEST
 	//Чтение = Новый ЧтениеJSON;
-	//Чтение.УстановитьСтроку( "{""status"":""success"",""data"":{""authToken"":""9HqLlyZOugoStsXCUfD_0YdwnNnunAJF8V47U3QHXSq"",""userId"":""aobEdbYhXfu5hkeqG"",""me"":{""_id"":""aYjNnig8BEAWeQzMh"",""name"":""RocketCat"",""emails"":[{""address"":""rocket.cat@rocket.chat"",""verified"":false}],""status"":""offline"",""statusConnection"":""offline"",""username"":""rocket.cat"",""utcOffset"":-3,""active"":true,""roles"":[""admin""],""settings"":{""preferences"":{}},""avatarUrl"":""http://localhost:3000/avatar/test""}}}" );
+	//Чтение.УстановитьСтроку( "{""status"":""success"",""data"":{""authToken"":""*"",""userId"":""*"",""me"":{""_id"":""aYjNnig8BEAWeQzMh"",""name"":""RocketCat"",""emails"":[{""address"":""rocket.cat@rocket.chat"",""verified"":false}],""status"":""offline"",""statusConnection"":""offline"",""username"":""rocket.cat"",""utcOffset"":-3,""active"":true,""roles"":[""admin""],""settings"":{""preferences"":{}},""avatarUrl"":""http://localhost:3000/avatar/test""}}}" );
 	//РезультатМетода = ПрочитатьJSON(Чтение);
 	////-------------------------------
 	
@@ -58,8 +58,8 @@
 КонецФункции
 
 Функция ОбновитьСписокПользователей(ФизЛицо = Неопределено) 
-	//curl -H "X-Auth-Token: 9HqLlyZOugoStsXCUfD_0YdwnNnunAJF8V47U3QHXSq" \
-	//     -H "X-User-Id: aobEdbYhXfu5hkeqG" \
+	//curl -H "X-Auth-Token: *" \
+	//     -H "X-User-Id: *" \
 	//     http://localhost:3000/api/v1/users.list
 	Всего			= 1;
 	КолНаЗапрос 	= 100;
@@ -131,8 +131,8 @@
 КонецФункции
 
 Функция ОтправитьСообщение(Id, Сообщение) 
-	//curl -H "X-Auth-Token: 9HqLlyZOugoStsXCUfD_0YdwnNnunAJF8V47U3QHXSq" \
-	//     -H "X-User-Id: aobEdbYhXfu5hkeqG" \
+	//curl -H "X-Auth-Token: *" \
+	//     -H "X-User-Id: *" \
 	//     -H "Content-type:application/json" \
 	//     http://localhost:3000/api/v1/chat.postMessage \
 	//     -d '{ "channel": "#general", "text": "This is a test!" }'	
